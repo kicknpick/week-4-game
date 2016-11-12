@@ -15,7 +15,7 @@ $(document).ready(function() {
 
 	// create rondomNumber
 	var randomNumber = Math.floor(Math.random() * 120) + 19;
-	$("#randomNumber").html(randomNumber);
+	$("#randomNumber").html("Random Number: " + randomNumber);
 	var totalScore = 0;
 	var loss = 0;
 	var wins = 0;
@@ -30,7 +30,7 @@ $(document).ready(function() {
 	
 	function reset() {
 		var newRandomNumber = Math.floor(Math.random() * 120) + 19;
-		$("#randomNumber").html(newRandomNumber);
+		$("#randomNumber").html("Random Number: " + newRandomNumber);
 		randomNumber = newRandomNumber;
 		totalScore = 0;
 		$("#totalScore").html(totalScore);
