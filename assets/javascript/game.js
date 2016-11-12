@@ -14,26 +14,36 @@
 $(document).ready(function() {
 
 	// create rondomNumber
-	var randomNumber = Math.floor(Math.random() * 100);
+	var randomNumber = Math.floor(Math.random() * 120) + 19;
 	$("#randomNumber").html(randomNumber);
 	var totalScore = 0;
 	var loss = 0;
 	var wins = 0;
-	var crystal1 = Math.floor(Math.random() * 10);
-	var crystal2 = Math.floor(Math.random() * 20);
-	var crystal3 = Math.floor(Math.random() * 50);
-	var crystal4 = Math.floor(Math.random() * 5);
-
+	var crystal1 = Math.floor(Math.random() * 12) + 1;
+	console.log(crystal1);
+	var crystal2 = Math.floor(Math.random() * 12) + 1;
+	console.log(crystal2);
+	var crystal3 = Math.floor(Math.random() * 12) + 1;
+	console.log(crystal3);
+	var crystal4 = Math.floor(Math.random() * 12) + 1;
+	console.log(crystal4);
 	
-	// function reset() {
-	// 	var randomNumber = Math.floor(Math.random() * 100);
-	// 	$("#randomNumber").html(randomNumber);
-	// 	var totalScore = 0;
-	// 	var crystal1 = Math.floor(Math.random() * 10);
-	// 	var crystal2 = Math.floor(Math.random() * 20);
-	// 	var crystal3 = Math.floor(Math.random() * 50);
-	// 	var crystal4 = Math.floor(Math.random() * 5);
-	// };
+	function reset() {
+		var newRandomNumber = Math.floor(Math.random() * 120) + 19;
+		$("#randomNumber").html(newRandomNumber);
+		randomNumber = newRandomNumber;
+		totalScore = 0;
+		$("#totalScore").html(totalScore);
+		crystal1 = Math.floor(Math.random() * 12) + 1;
+		console.log(crystal1);
+		crystal2 = Math.floor(Math.random() * 12) + 1;
+		console.log(crystal2);
+		crystal3 = Math.floor(Math.random() * 12) + 1;
+		console.log(crystal3);
+		crystal4 = Math.floor(Math.random() * 12) + 1;
+		console.log(crystal4);
+
+	};
 
 	$("#crystal1").on("click", function() {
 		// crystal1 = Math.floor(Math.random() * 10);
@@ -60,9 +70,11 @@ $(document).ready(function() {
 		if (totalScore > randomNumber) {
 			loss ++;
 			$("#loss").html("Losses: " + loss);
+			reset();
 		} else if (totalScore == randomNumber) {
 			wins ++;
 			$("#wins").html("Win total: " + wins);
+			reset();
 		}; 
 
 	})
@@ -74,9 +86,11 @@ $(document).ready(function() {
 		if (totalScore > randomNumber) {
 			loss ++;
 			$("#loss").html("Losses: " + loss);
+			reset();
 		} else if (totalScore == randomNumber) {
 			wins ++;
 			$("#wins").html("Win total: " + wins);
+			reset();
 		}; 
 
 	})
@@ -88,13 +102,15 @@ $(document).ready(function() {
 		if (totalScore > randomNumber) {
 			loss ++;
 			$("#loss").html("Losses: " + loss);
+			reset();
 		} else if (totalScore == randomNumber) {
 			wins ++;
 			$("#wins").html("Win total: " + wins);
+			reset();
 		}; 
 
 	})
-	console.log(totalScore);
+	// console.log(totalScore);
 
 
 

@@ -2,7 +2,15 @@ body {
 	background-image: url("../images/dimension.png");
 }
 
-.crystal {
+/*.crystal {
 	height: 250px;
 	width: 250px;
+}*/
+
+img {
+	height: 200px;
+	width: 200px;
+	padding: 0px;
+	margin: 0px;
 }
+
